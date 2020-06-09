@@ -19,11 +19,3 @@ int main()
 	cout<<"Result is: "<<result;
 	return 0;
 }
-
-
-int main() 
-{
-
-	return 0;
-}
-
