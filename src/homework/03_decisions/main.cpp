@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<cctype>
 using std::cout; using std::cin; using std::string;
 //write include statements
 #include "decisions.h"
@@ -28,28 +29,20 @@ int main()
 {
 	string letter_grade;
 	int credit_hours, sum_credit_hours = 0, sum_credit_points = 0;
+	char option;
 
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade) * credit_hours;
-	sum_credit_hours += credit_hours;
+	do
+		{
+		cout << "Enter letter grade: ";
+		cin >> letter_grade;
+		cout << "Enter credit hours: ";
+		cin >> credit_hours;
+		sum_credit_points += get_grade_points(letter_grade) * credit_hours;
+		sum_credit_hours += credit_hours;
 
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade)  * credit_hours;
-	sum_credit_hours += credit_hours;
-
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade)  * credit_hours;
-	sum_credit_hours += credit_hours;
-
+		cout << "Another entry? (Y/N) ";
+		cin >> option;		
+		} while ((option == 'Y') || (option == 'y'));
 
 	double gpa = calculate_gpa(sum_credit_hours, sum_credit_points);
 	cout << "GPA: " << gpa;
