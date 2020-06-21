@@ -1,6 +1,8 @@
 #include<string>
 #include<vector>
 
+int sum(std::vector<int> v);
+
 /*
 Write function prototype for void function loop_vector_w_index with no parameters.
 

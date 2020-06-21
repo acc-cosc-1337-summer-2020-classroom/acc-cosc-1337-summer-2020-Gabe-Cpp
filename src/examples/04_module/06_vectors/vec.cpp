@@ -1,8 +1,17 @@
-#include "for_ranged.h"
-#include<iostream>
-#include<vector>
+#include "vec.h"
 
-using std::vector;
+
+/*
+* sum(v) Adds up the contents of an int vector v is the vector to sum
+* Returns the sum of all the elements or zero if the vector is empty.
+*/
+int sum(std::vector<int> v) {
+    int result = 0;
+    for (int elem : v)
+        result += elem;
+    return result;
+}
+
 
 /*
 Function loop_vector_w_index 
