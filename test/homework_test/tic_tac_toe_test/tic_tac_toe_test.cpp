@@ -11,6 +11,7 @@ TEST_CASE("Verify game ends when the board is full")
 	TicTacToe tic_tac_toe;
 	tic_tac_toe.start_game("X");
 
+
 	tic_tac_toe.mark_board(1);
 	REQUIRE(tic_tac_toe.game_over() == false);
 	tic_tac_toe.mark_board(2);
@@ -26,8 +27,23 @@ TEST_CASE("Verify game ends when the board is full")
 	tic_tac_toe.mark_board(6);
 	REQUIRE(tic_tac_toe.game_over() == false);
 	tic_tac_toe.mark_board(9);
-	REQUIRE(tic_tac_toe.game_over() == false);
+	REQUIRE(tic_tac_toe.game_over() == false);	
 	tic_tac_toe.mark_board(8);
-	REQUIRE(tic_tac_toe.game_over() == true);
+	REQUIRE(tic_tac_toe.game_over() == true);      
 
 }
+
+TEST_CASE("Test first player set to X")
+{
+	TicTacToe tic_tac_toe;
+	tic_tac_toe.start_game("X");
+	REQUIRE(tic_tac_toe.get_player() == "X");
+}
+
+TEST_CASE("Test first player set to 0")
+{
+	TicTacToe tic_tac_toe;
+	tic_tac_toe.start_game("0");
+	REQUIRE(tic_tac_toe.get_player() == "0");
+}
+
