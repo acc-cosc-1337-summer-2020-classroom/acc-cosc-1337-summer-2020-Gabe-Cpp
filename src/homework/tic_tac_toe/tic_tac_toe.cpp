@@ -39,7 +39,7 @@ void TicTacToe::set_next_player()
 {
     if(player == "X")
     {
-        player= "0";
+        player= "O";
     }
     else
     {
@@ -104,7 +104,7 @@ bool TicTacToe::check_diag_win() {
 
 void TicTacToe::set_winner() {
     if (player == "X") {
-        winner = "0";
+        winner = "O";
     }
     winner = "X";
 }

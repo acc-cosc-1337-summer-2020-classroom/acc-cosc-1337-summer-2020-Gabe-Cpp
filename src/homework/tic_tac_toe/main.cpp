@@ -5,22 +5,29 @@ int main()
 	TicTacToe tic_tac_toe;
 	std::string player;
 
-	std::cout<<"Enter X or 0: ";
-	std::cin>>player;
-
-	tic_tac_toe.start_game(player);
-
+	
+	int cont;
 	do
 	{
-		int position;
-		std::cout<<"Enter position from 1 to 9: ";
-		std::cin>>position;
-		tic_tac_toe.mark_board(position);
-		tic_tac_toe.display_board();
+		std::cout<<"Enter X or O: ";
+		std::cin>>player;
 
-	} while (tic_tac_toe.game_over() == false);
+		tic_tac_toe.start_game(player);
+	
+		do
+		{
+			int position;
+			std::cout<<"Enter position from 1 to 9: ";
+			std::cin>>position;
+			tic_tac_toe.mark_board(position);
+			tic_tac_toe.display_board();
 
-	std::cout<<"Game over";
+		} while (tic_tac_toe.game_over() == false);
+
+		std::cout<<"Game over, press one to play again: ";
+		std::cin>>cont;
+		
+	} while (cont == 1);
 	
 	return 0;
 }
