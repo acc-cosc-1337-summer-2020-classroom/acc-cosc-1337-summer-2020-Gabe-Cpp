@@ -27,18 +27,18 @@ void BankAccount::open(int amount){
 double BankAccount::rate = init_rate(); //for the static variable
 
 void display_balance(const BankAccount& b){ //for the friend function
-    std::cout << "Balance is: " << b.balance << '\n'; //balance from private
+    std::cout << "Balance (w friend fct) is: " << b.balance << '\n'; //balance from private
 }
 
 std::ostream & operator<<(std::ostream& out, const BankAccount& b){
-    out << "Balance is: "<< b.balance<<'\n';
+    out << "Balance (w ostream) is: "<< b.balance<<'\n';
     //not part of the class and used for private data
     return out;
 }
 
 std::istream & operator>>(std::istream& in, BankAccount& b){
     int amount;
-    std::cout << "Enter amount: ";
+    std::cout << "Enter (w istream) amount: ";
     in >> amount;
     b.deposit(amount);
 

@@ -18,8 +18,8 @@ class BankAccount
     private:
         int balance {0};
         const int min_amt_to_open{25};
-        static double rate; //static variable
-        static double init_rate() {return .025; }
+        static double rate; //static member variable
+        static double init_rate() {return .025; } // static member function
 };
 
 class Invalid{
