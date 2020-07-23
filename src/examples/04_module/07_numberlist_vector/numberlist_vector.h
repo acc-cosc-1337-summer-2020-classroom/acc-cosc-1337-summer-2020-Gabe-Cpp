@@ -1,4 +1,5 @@
 //numberlist_vector.h
+//Walterman Listing 13.6 to VSStudio study
 #include <iostream>
 #include <fstream>
 #include<string>
@@ -26,9 +27,4 @@ void save_vector(const std::string& filename, const std::vector<int>& vec);
 * v is a vector holding integers.
 */
 void load_vector(const std::string& filename, std::vector<int>& vec);
-
-/*
-Write function prototype for void function loop_vector_w_for_ranged_const_ref with a vector of int const pass by reference parameter.
-*/
-
 

@@ -56,22 +56,3 @@ void load_vector(const std::string& filename, std::vector<int>& vec) {
     else
         std::cout << "Unable to load in the file\n";
 }
-
-
-/*
-Function loop_vector_w_for_ranged_ref
-
-Displays the numbers to screen 
-
-@param vector<int>&
-*/
-
-
-/*
-Function loop_vector_w_for_ranged_const_ref
-
-Displays the numbers to screen
-
-@param const vector<int>&
-*/
-
