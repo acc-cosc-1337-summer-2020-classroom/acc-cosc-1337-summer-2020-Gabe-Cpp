@@ -4,10 +4,12 @@
 
 
 int main() {
+	std::cout << "It creates a vector where the .exe is located.\n";
+	std::cout << "An integer at a time can be added to the vector.\n";
 	std::vector<int> list;
 	bool done = false;
 	char command;
-	while (!done) {
+	while (!done) {		
 		std::cout << "I)nsert <item> P)rint "
 				  << "S)ave <filename> L)oad <filename> "
 		          << "E)rase Q)uit: ";
